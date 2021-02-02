@@ -39,9 +39,15 @@
   --border-form: #D7DCDE;
   --border-form-hover: #B4B9BB;
   --opacity-button: rgba(255, 255, 255, 0.3);
+  --sort-button: #231F20;
+  --sort-button-calm: rgba(166, 166, 166, 0.2);
+  --sort-button-hover: #A6A6A6;
+  --catalog-button-hover: #DFDFDF;
+  --catalog-button-pressing: #D5D5D5;
+  --catalog-button-pressing-text: rgba(0, 0, 0, 0.3);
 }
 
-body {
+.page-body {
   min-width: 960px;
   margin: 0;
   padding: 0;
@@ -70,6 +76,10 @@ img {
   text-transform: uppercase;
 }
 
+.main-header-logo:hover {
+  opacity: 0.3;
+}
+
 .site-navigation {
   list-style: none;
 }
@@ -85,6 +95,15 @@ img {
 .site-navigation a:focus, .cart:focus {
   color: var(--basic-title);
   opacity: 0.3;
+}
+
+.navigation-selected {
+  border-bottom: 2px solid var(--basic-red);
+  padding-bottom: 13px;
+}
+
+.navigation-selected:focus, .navigation-selected:hover {
+  border-bottom: none;
 }
 
 .visually-hidden {
@@ -138,6 +157,7 @@ img {
   text-transform: uppercase;
   background-color: var(--basic-red);
   border: none;
+  border-radius: 3px;
 }
 
 .button:hover {
@@ -147,13 +167,14 @@ img {
 .button:focus {
   color: var(--opacity-button);
   background-color: var(--basic-button-pressing);
-}
-
-.services-list {
-  list-style: none;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1)
 }
 
 /* services */
+
+.services-list {
+    list-style: none;
+}
 
 .services-list h3 {
   font-weight: bold;
@@ -163,16 +184,22 @@ img {
   color: var(--basic-title);
 }
 
-.services-item-web img {
-  background-color: var(--basic-red);
+.services-item-web {
+  background: url(../img/website.png) no-repeat;
+  background-size: 300px 146px;
+  padding-top: 170px;
 }
 
-.services-item-apps img {
-  background-color: var(--services-app);
+.services-item-apps {
+  background: url(../img/apps.png) no-repeat;
+  background-size: 300px 146px;
+  padding-top: 170px;
 }
 
-.services-item-presentation img {
-  background-color: var(--services-presentation);
+.services-item-presentation {
+  background: url(../img/presentation.png) no-repeat;
+  background-size: 300px 146px;
+  padding-top: 170px;
 }
 
 .button-app {
@@ -252,6 +279,171 @@ img {
   opacity: 0.1;
 }
 
+/* catalog page */
+
+.page-title {
+  background-color: var(--header-background);
+  text-align: center;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.sort-container {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.sort-container p {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-title);
+}
+
+.sort-list {
+  list-style: none;
+}
+
+.sort-item {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-title);
+  opacity: 0.3;
+}
+
+.sort-item:hover {
+  opacity: 0.6;
+}
+
+.sort-item:focus, .sort-item-select {
+  opacity: 1;
+}
+
+.sort-button {
+  color: var(--sort-button-calm);
+}
+
+.sort-button:hover {
+  color: var(--sort-button-hover);
+}
+
+.sort-button:focus, .sort-button-select {
+  color: var(--sort-button);
+}
+
+.filter legend {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-title);
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 19px;
+}
+
+.filter input {
+  background: var(--header-background);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.filter-button {
+  background-color: var(--header-background);
+  color: var(--basic-title);
+}
+
+.filter-button:hover {
+  background-color: var(--catalog-button-hover);
+}
+
+.filter-button:focus {
+  background-color: var(--catalog-button-pressing);
+  color: var(--catalog-button-pressing-text);
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-list img {
+  background-color: var(--border-form-hover);
+}
+
+.catalog-item-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-title);
+}
+
+.catalog-item-title:hover {
+  color: var(--basic-red);
+}
+
+.catalog-item-title:focus {
+  color: var(--basic-title);
+  opacity: 0.3;
+}
+
+.button-price {
+  color: var(--button-text);
+  background-color: var(--basic-red);
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.button-price:focus {
+  background-color: var(--basic-button-pressing);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button-price:hover {
+  background-color: var(--basic-button-hover);
+}
+
+.catalog-item-info {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--footer-contacts);
+}
+
+.pagination-list {
+  list-style: none;
+  color: var(--basic-title);
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.pagination-item a {
+  background-color: var(--header-background);
+  color: var(--basic-title);
+  border: none;
+  border-radius: 3px;
+}
+
+.pagination-item-select a {
+  background-color: var(--button-text);
+  border: 3px solid #DBDBDB;
+}
+
+.pagination-item a:hover {
+  background-color: var(--catalog-button-hover);
+}
+
+.pagination-item a:focus {
+  background-color: var(--catalog-button-pressing);
+  color: var(--catalog-button-pressing-text);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
 /* footer */
 
 .map img:nth-child(2) {
@@ -281,35 +473,18 @@ img {
 
 .footer-social ul {
   list-style: none;
+  display: flex;
+  padding-inline-start: 0;
 }
 
 .social-button {
-  float: left;
-  margin: 10px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   width: 81px;
   height: 81px;
-}
-
-.social-vk {
-  background: url(../img/icons/vk-icon.svg);
   background-color: var(--social-button);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.social-fb {
-  background-image: url(../img/icons/fb-icon.svg);
-  background-color: var(--social-button);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.social-insta {
-  background-image: url(../img/icons/insta-icon.svg);
-  background-color: var(--social-button);
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .social-button:hover {
@@ -318,11 +493,12 @@ img {
 
 .social-button:focus {
   background-color: var(--basic-button-pressing);
-  opacity: 0.3;
+  fill-opacity: 0.3;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
 .discount {
-  text-align: center;
+  text-align: left;
 }
 
 .discount p:first-child {
