@@ -48,7 +48,7 @@
 }
 
 .page-body {
-  min-width: 960px;
+  min-width: 1160px;
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -56,6 +56,10 @@
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-text);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a {
@@ -67,6 +71,10 @@ img {
   height: auto;
 }
 
+.page {
+  height: 100%;
+}
+
 /* navigation */
 
 .main-header {
@@ -74,6 +82,13 @@ img {
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
+  }
+
+.main-navigation {
+  display: grid;
+  grid-template-columns: auto 1fr min-content;
+  max-width: 1160px;
+  margin: 0 auto;
 }
 
 .main-header-logo:hover {
@@ -82,6 +97,9 @@ img {
 
 .site-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-self: center;
 }
 
 .site-navigation a, .cart {
@@ -114,14 +132,25 @@ img {
   margin: -1px;
 }
 
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 /* features */
 
 .features {
   background-color: var(--header-background);
+  display: grid;
 }
 
 .features-slider {
   list-style: none;
+}
+
+.features-slider li {
+  height: 431px;
 }
 
 .feature-slide-1 p:first-child, .feature-slide-2 p:first-child, .feature-slide-3 p:first-child {
@@ -146,6 +175,13 @@ img {
   background-position: center right;
 }
 
+.switch-slider {
+  justify-self: center;
+  display: flex;
+  width: 18px;
+  height: 18px;
+}
+
 .button {
   font-weight: 500;
   font-size: 16px;
@@ -158,6 +194,7 @@ img {
   background-color: var(--basic-red);
   border: none;
   border-radius: 3px;
+  padding: 10px 20px 10px 20px;
 }
 
 .button:hover {
@@ -173,7 +210,11 @@ img {
 /* services */
 
 .services-list {
-    list-style: none;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .services-list h3 {
@@ -184,22 +225,25 @@ img {
   color: var(--basic-title);
 }
 
+.services-list p {
+  margin-bottom: 50px;
+}
+
+.services-list li {
+  background-size: 300px 146px;
+  padding-top: 150px;
+}
+
 .services-item-web {
   background: url(../img/website.png) no-repeat;
-  background-size: 300px 146px;
-  padding-top: 170px;
 }
 
 .services-item-apps {
   background: url(../img/apps.png) no-repeat;
-  background-size: 300px 146px;
-  padding-top: 170px;
 }
 
 .services-item-presentation {
   background: url(../img/presentation.png) no-repeat;
-  background-size: 300px 146px;
-  padding-top: 170px;
 }
 
 .button-app {
@@ -228,25 +272,43 @@ img {
 
 /* description */
 
-.description p:nth-child(2) {
+.description {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-column-gap: 80px;
+}
+
+.description-list li {
+  padding: 10px;
+}
+
+.about p:first-child {
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
   color: var(--basic-title);
 }
 
-.description p:nth-child(4) {
+.about p:nth-child(3), .stats p:nth-child(2) {
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-.description p:nth-child(7) {
-  font-weight: bold;
+.stats p:nth-child(2) {
+  text-align: center;
+  color: var(--basic-title);
+}
+
+.description-table td, th {
+  padding: 10px;
 }
 
 .table-value {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 45px;
   line-height: 64px;
+  text-align: left;
+  color: var(--basic-title);
 }
 
 .table-value span {
@@ -259,12 +321,16 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
+  text-align: left;
 }
 
 /* partners */
 
 .partners-list {
+  display: grid;
   list-style: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
 }
 
 .partner-item:hover {
@@ -471,10 +537,18 @@ img {
   color: inherit;
 }
 
+.footer-social {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 140px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
 .footer-social ul {
   list-style: none;
   display: flex;
-  padding-inline-start: 0;
+  padding-inline-start: 0px;
 }
 
 .social-button {
@@ -485,6 +559,7 @@ img {
   width: 81px;
   height: 81px;
   background-color: var(--social-button);
+  margin: 0 5px;
 }
 
 .social-button:hover {
