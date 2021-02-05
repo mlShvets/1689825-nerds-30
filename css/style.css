@@ -82,7 +82,7 @@ img {
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
-  }
+}
 
 .main-navigation {
   display: grid;
@@ -215,6 +215,9 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 70px;
   margin-bottom: 70px;
+  padding: 0px;
+  column-gap: 100px;
+  width: 300px;
 }
 
 .services-list h3 {
@@ -232,6 +235,7 @@ img {
 .services-list li {
   background-size: 300px 146px;
   padding-top: 150px;
+  width: 300px;
 }
 
 .services-item-web {
@@ -347,17 +351,30 @@ img {
 
 /* catalog page */
 
+.page-catalog {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 120px;
+  align-content: start;
+}
+
 .page-title {
   background-color: var(--header-background);
   text-align: center;
   font-weight: 500;
   font-size: 55px;
   line-height: 55px;
+  color: var(--basic-title);
+  margin: 0px;
+  padding: 50px;
 }
 
 .sort-container {
+  display: flex;
   list-style: none;
   text-transform: uppercase;
+  grid-column: 2/ -1;
 }
 
 .sort-container p {
@@ -397,6 +414,10 @@ img {
 
 .sort-button:focus, .sort-button-select {
   color: var(--sort-button);
+}
+
+.filters {
+  grid-row: 1/-1;
 }
 
 .filter legend {
