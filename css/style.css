@@ -82,13 +82,18 @@ img {
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
+  padding-top: 50px;
 }
 
 .main-navigation {
-  display: grid;
-  grid-template-columns: auto 1fr min-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1160px;
   margin: 0 auto;
+}
+.main-header-logo {
+  width: 160px;
 }
 
 .main-header-logo:hover {
@@ -96,10 +101,30 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
-  justify-self: center;
+  width: 437px;
+}
+
+.site-navigation li {
+  margin-right: 45px;
+}
+
+.site-navigation li:nth-child(4n) {
+  margin-right: 0px;
+}
+
+.user-nav {
+  max-width: 115px;
+  margin-left: 60px;
+}
+
+.cart {
+  padding-left: 25px;
 }
 
 .site-navigation a, .cart {
@@ -195,6 +220,7 @@ img {
   border: none;
   border-radius: 3px;
   padding: 10px 20px 10px 20px;
+  height: 50px;
 }
 
 .button:hover {
@@ -418,6 +444,14 @@ img {
 
 .filters {
   grid-row: 1/-1;
+  width: 260px;
+}
+
+.filters fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-bottom: 30px;
 }
 
 .filter legend {
@@ -426,11 +460,18 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-title);
+  margin-bottom: 20px;
 }
 
 .filter ul {
   list-style: none;
   line-height: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-option {
+  margin-bottom: 19px;
 }
 
 .filter input {
@@ -443,6 +484,7 @@ img {
 .filter-button {
   background-color: var(--header-background);
   color: var(--basic-title);
+  width: 100%;
 }
 
 .filter-button:hover {
@@ -456,10 +498,26 @@ img {
 
 .catalog-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 55px;
 }
 
 .catalog-list img {
+  height: 578px;
+  width: 378px;
+  margin: 0px;
   background-color: var(--border-form-hover);
+}
+
+.catalog-item {
+  width: 320px;
+  min-height: 620px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .catalog-item-title {
@@ -569,7 +627,7 @@ img {
 .footer-social ul {
   list-style: none;
   display: flex;
-  padding-inline-start: 0px;
+  padding: 0;
 }
 
 .social-button {
