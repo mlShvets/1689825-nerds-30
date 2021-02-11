@@ -92,6 +92,7 @@ img {
   max-width: 1160px;
   margin: 0 auto;
 }
+
 .main-header-logo {
   width: 160px;
 }
@@ -381,7 +382,7 @@ img {
   display: grid;
   grid-template-columns: 260px 1fr;
   grid-template-rows: auto auto;
-  column-gap: 120px;
+  column-gap: 140px;
   align-content: start;
 }
 
@@ -398,6 +399,8 @@ img {
 
 .sort-container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   list-style: none;
   text-transform: uppercase;
   grid-column: 2/ -1;
@@ -410,8 +413,19 @@ img {
   color: var(--basic-title);
 }
 
+.sort-selector-list {
+  width: 360px;
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  justify-content: space-between;
+}
+
 .sort-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sort-item {
@@ -420,6 +434,7 @@ img {
   line-height: 18px;
   color: var(--basic-title);
   opacity: 0.3;
+  padding-right: 26px;
 }
 
 .sort-item:hover {
@@ -428,6 +443,11 @@ img {
 
 .sort-item:focus, .sort-item-select {
   opacity: 1;
+}
+
+.sort-button-wraper {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sort-button {
@@ -508,16 +528,19 @@ img {
 .catalog-list img {
   height: 578px;
   width: 378px;
-  margin: 0px;
   background-color: var(--border-form-hover);
 }
 
 .catalog-item {
-  width: 320px;
+  width: 360px;
   min-height: 620px;
   margin-right: 40px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item-title {
