@@ -658,7 +658,7 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .filter-form fieldset:first-child {
@@ -682,7 +682,7 @@ img {
 }
 
 .filter-option {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   padding-left: 36px;
 }
 
@@ -807,7 +807,7 @@ img {
   background-color: var(--header-background);
   color: var(--basic-title);
   width: 100%;
-  margin-top: 7px;
+  margin-top: 5px;
   padding: 16px 20px;
 }
 
@@ -1105,7 +1105,7 @@ img {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  margin-top: 7px;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
