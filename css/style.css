@@ -1236,9 +1236,9 @@ img {
 }
 
 .modal-close:hover, .modal-close:focus {
-  opacity: 0.1;
+  opacity: 1;
 }
 
 .modal-close:active {
-  opacity: 1;
+  opacity: 0.1;
 }
