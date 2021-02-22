@@ -825,6 +825,10 @@ img {
   opacity: 0.3;
 }
 
+.filter-input-checkbox:disabled+label:hover::before, .filter-input-radio:disabled+label:hover::before {
+  opacity: 0.4;
+}
+
 .filter-button {
   background-color: var(--header-background);
   color: var(--basic-title);
