@@ -233,6 +233,14 @@ img {
   line-height: 24px;
 }
 
+.feature-slide-2 .slide-title, .feature-slide-3 .slide-title {
+  margin: 0 0 37px 0;
+}
+
+.feature-slide-2 .slide-info, .feature-slide-3 .slide-info {
+  margin-bottom: 28px;
+}
+
 .features-slider .slider-button {
   padding: 16px 54px;
   margin-bottom: 80px;
@@ -795,6 +803,7 @@ img {
 
 .filter-input-checkbox:checked+label::before {
   background-image: url(../img/icons/checkbox-on.svg);
+  width: 25px;
   opacity: 0.4;
   background-repeat: no-repeat;
 }
@@ -1182,7 +1191,7 @@ img {
   line-height: 18px;
 }
 
-.feedback-form input[type="text"], textarea {
+.feedback-form input[type="text"], .feedback-form input[type="email"], textarea {
   font-weight: normal;
   line-height: 18px;
   color: var(--modal-text);
@@ -1245,4 +1254,42 @@ img {
 
 .modal-close:active {
   opacity: 0.1;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
 }
