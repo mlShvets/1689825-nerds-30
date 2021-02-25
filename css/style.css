@@ -45,6 +45,10 @@
   --catalog-button-hover: #DFDFDF;
   --catalog-button-pressing: #D5D5D5;
   --catalog-button-pressing-text: rgba(0, 0, 0, 0.3);
+  --switch-slider: #c1c1c1;
+  --toggle: #ababab;
+  --catalog-list-background: #f2f2f2;
+  --pagination-button-select: #DBDBDB;
 }
 
 .page-body {
@@ -225,11 +229,12 @@ img {
   line-height: 55px;
   color: var(--basic-title);
   padding-top: 78px;
-  margin: 0 0 26px 0;
+  margin: 0 0 25px 0;
 }
 
 .slide-info {
-  margin-bottom: 40px;
+  margin-top: 26px;
+  margin-bottom: 39px;
   line-height: 24px;
 }
 
@@ -271,7 +276,7 @@ img {
 
 .switch-slider {
   position: absolute;
-  bottom: 97px;
+  bottom: 96px;
   left: 546px;
   z-index: 20;
   display: flex;
@@ -288,15 +293,15 @@ img {
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;
-  border: 2px solid #c1c1c1;
+  border: 2px solid var(--switch-slider);
   border-radius: 50%;
 }
 
 .switch-slider button {
   position: relative;
   padding: 0;
-  width: 17px;
-  height: 17px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background-color: var(--button-text);
   border: none;
@@ -734,7 +739,7 @@ img {
   height: 4px;
   padding: 0;
   border: 8px solid var(--button-text);
-  background-color: #ababab;
+  background-color: var(--toggle);
   border-radius: 50%;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
   cursor: pointer;
@@ -900,7 +905,7 @@ img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--catalog-list-background);
 }
 
 .catalog-item-discription {
@@ -1021,7 +1026,7 @@ img {
 
 .pagination-button-select {
   background-color: var(--button-text);
-  border: 3px solid #DBDBDB;
+  border: 3px solid var(--pagination-button-select);
   padding: 13px 17px;
 }
 
@@ -1073,7 +1078,7 @@ img {
   color: var(--basic-title);
   text-transform: uppercase;
   margin-top: 40px;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 }
 
 .contact-text {
@@ -1140,7 +1145,7 @@ img {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-bottom: 0;
 }
 

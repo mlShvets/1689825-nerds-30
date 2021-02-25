@@ -5,6 +5,12 @@ const feedbackForm = feedbackPopup.querySelector(".feedback-form");
 const feedbackName = feedbackPopup.querySelector("[name=name]");
 const feedbackEmail = feedbackPopup.querySelector("[name=email]");
 const feedbackTextarea = feedbackPopup.querySelector("[name=message]");
+const dotFirst = document.querySelector(".dot-1");
+const dotSecond = document.querySelector(".dot-2");
+const dotThird = document.querySelector(".dot-3");
+const slideFirst = document.querySelector(".feature-slide-1");
+const slideSocond = document.querySelector(".feature-slide-2");
+const slideThird = document.querySelector(".feature-slide-3");
 let isStorageSupport = true;
 let storagename = "";
 let storageemail = "";
@@ -15,7 +21,6 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
-
 
 feedbackLink.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -47,7 +52,6 @@ feedbackForm.addEventListener("submit", function (evt) {
   }
 });
 
-
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (feedbackPopup.classList.contains("modal-show")) {
@@ -56,6 +60,31 @@ window.addEventListener("keydown", function (evt) {
       feedbackPopup.classList.remove("modal-error")
     }
   }
+});
+
+dotFirst.addEventListener("click", function (_evt) {
+  slideFirst.classList.add("slide-current");
+  slideSocond.classList.remove("slide-current");
+  slideThird.classList.remove("slide-current");
+  dotFirst.classList.add("current");
+  dotSecond.classList.remove("current");
+  dotThird.classList.remove("current");
+});
+dotSecond.addEventListener("click", function (_evt) {
+  slideFirst.classList.remove("slide-current");
+  slideSocond.classList.add("slide-current");
+  slideThird.classList.remove("slide-current");
+  dotFirst.classList.remove("current");
+  dotSecond.classList.add("current");
+  dotThird.classList.remove("current");
+});
+dotThird.addEventListener("click", function (_evt) {
+  slideFirst.classList.remove("slide-current");
+  slideSocond.classList.remove("slide-current");
+  slideThird.classList.add("slide-current");
+  dotFirst.classList.remove("current");
+  dotSecond.classList.remove("current");
+  dotThird.classList.add("current");
 });
 
 
