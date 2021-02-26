@@ -346,9 +346,10 @@ img {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 70px;
+  margin-bottom: 80px;
   padding: 0px;
   column-gap: 100px;
+  row-gap: 40px;
   width: 300px;
 }
 
@@ -532,7 +533,7 @@ img {
   display: grid;
   list-style: none;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 40px;
+  grid-gap: 40px;
   align-items: center;
   margin: 0;
   padding: 0;
